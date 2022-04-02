@@ -1,0 +1,81 @@
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  fieldset>label {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 1em;
+  }
+  
+  input,
+  textarea {
+    border: none;
+    border-radius: 0.2em;
+  }
+  
+  #fieldset1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+  }
+  
+  fieldset#name,
+  fieldset#mail {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+  
+  #name>input,
+  #mail>input {
+    width: 20em;
+    height: 2em;
+  }
+  
+  #fieldset2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 2em;
+  }
+  
+  #fieldset2>label {
+    margin-left: 1em;
+  }
+  
+  #fieldset2>textarea {
+    width: 43em;
+    height: 6em;
+    margin-left: 1em;
+  }
+  
+  i.fas {
+    display: inline;
+    font-size: 24px;
+    padding: 1em;
+  }
+  
+  #field_contact {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3em;
+    font-weight: bold;
+  }
+  
+  .tel_wrap {
+    padding-right: 1em;
+  }
+  
+  .tel_wrap>a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .address_wrap>address {
+    display: inline-block;
+  }

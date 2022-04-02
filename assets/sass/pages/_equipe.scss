@@ -1,0 +1,30 @@
+#equipe {
+    height: 35em;
+  }
+  
+  .grey {
+    background-color: rgb(224, 224, 224);
+  }
+  
+  .portrait>img {
+    border-radius: 100em;
+    border: 1px solid #01333e;
+    width: 150px;
+  }
+  
+  .conteneur-flexbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10em;
+  }
+  
+  .flex {
+    text-align: center;
+    width: 9em;
+  }
+  
+  h5 {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
