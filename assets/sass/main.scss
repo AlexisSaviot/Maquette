@@ -2,7 +2,7 @@
   'abstracts/variables',
   'abstracts/functions',
   'abstracts/mixins',
-  'abstracts/placeholders';
+  'abstracts/placeholder';
 
 // @import
 //   'vendors/;
@@ -16,21 +16,19 @@
   'layout/grid',
   'layout/header',
   'layout/footer',
-  'layout/sidebar',
   'layout/forms';
 
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
+// @import
+//   'components/buttons',
+//   'components/carousel',
+//   'components/cover',
+//   'components/dropdown';
 
 @import
   'pages/contact',
   'pages/equipe',
-  'pages/footer',
   'pages/projet',
-  'pages/temoignages';
+  'pages/temoignage';
   
 @import
   'themes/theme',

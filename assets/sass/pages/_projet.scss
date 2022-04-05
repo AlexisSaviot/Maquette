@@ -31,3 +31,27 @@
     color: #01333e;
     text-transform: uppercase;
   }
+
+  @include respond-to("medium") {
+    #projet {
+      height: 40em;
+    }
+  
+    div#projet>div.inside {
+      width: 90%;
+    }
+  
+    div#projet>div.inside>p {
+      font-size: 30px;
+    }
+  }
+
+  @include respond-to("small") {
+      #projet {
+  height: 50em;
+  }
+
+  #projet>.inside>p {
+    font-size: 16px;
+  }
+  }

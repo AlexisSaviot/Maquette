@@ -79,3 +79,82 @@
   .address_wrap>address {
     display: inline-block;
   }
+  
+  @include respond-to("medium") {
+    fieldset#name,
+    fieldset#mail {
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+    }
+  
+    #name>input,
+    #mail>input {
+      width: 20em;
+      height: 3em;
+    }
+  
+    #fieldset2>textarea {
+      width: 43em;
+      height: 10em;
+    }
+  
+    i.fas {
+      font-size: 44px;
+    }
+  
+    #field_contact {
+      font-size: 24px;
+    }
+  
+    footer>div>nav>ul>li>a {
+      font-size: 24px;
+    }
+  }
+  @include respond-to("small") {
+    #fieldset1 {
+      display: block;
+    }
+  
+    #fieldset2 {
+      padding: 0 0 3em 0;
+    }
+  
+    #name>input,
+    #mail>input {
+      width: 25em;
+      height: 8em;
+    }
+  
+    fieldset>label {
+      font-size: 44px;
+    }
+  
+    #fieldset2>label {
+      margin-left: 0.3em;
+    }
+  
+    #fieldset2>textarea {
+      width: 25em;
+      height: 20em;
+    }
+    #field_contact{
+      display: block;
+    }
+  
+    i.fas {
+      font-size: 44px;
+      padding-left: 0.4em;
+    }
+  
+    .tel_wrap {
+      display: block;
+      font-size: 30px;
+      padding-bottom: 1em;
+    }
+  
+    .address_wrap{
+      display: block;
+      font-size: 30px;
+    }
+  }

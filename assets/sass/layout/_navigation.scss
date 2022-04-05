@@ -1,0 +1,46 @@
+div#top>nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+#top>nav {
+    display: flex;
+    justify-content: flex-end;
+    height: 7.5em;
+    padding: 0.8em;
+}
+
+#top>nav>ul>li {
+    padding: 0.2em;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+@include respond-to("medium") {
+    #top>nav {
+        position: sticky;
+        top: 0;
+        background-color: #01333e;
+        height: 3em;
+      }
+    
+      #top>nav>ul>li {
+        font-size: 27px;
+        padding: 0.4em;
+      }
+}
+
+@include respond-to("small") {
+    #top>nav {
+        height: fit-content;
+      }
+    
+      #top>nav>ul>li {
+        font-size: 12px;
+        padding: 0 0.5em;
+      }
+
+      footer>div>nav>ul>li>a {
+        font-size: 14px;
+      }
+}

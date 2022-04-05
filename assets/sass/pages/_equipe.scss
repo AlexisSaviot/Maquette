@@ -23,8 +23,67 @@
     text-align: center;
     width: 9em;
   }
+
+  @include respond-to("medium") {
+    #equipe {
+      height: 60em;
+    }
   
-  h5 {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    .portrait>img {
+      width: 15em;
+    }
+  
+    .conteneur-flexbox {
+      display: grid;
+      grid-template-areas:
+        "arthur céline"
+        "léo cyril";
+      grid-auto-flow: row;
+      padding-right: 5em;
+      padding-left: 5em;
+    }
+  
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 3em;
+    }
+  }
+  @include respond-to("small") {
+    #equipe>.inside>h2 {
+      padding: 3em 1em 3em 1em
+    }
+  
+    #equipe {
+      height: 190em;
+    }
+  
+    .portrait>img {
+      width: 20em;
+    }
+  
+    .conteneur-flexbox {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .flex {
+      width: 100%;
+      padding-bottom: 10em;
+    }
+  
+    .conteneur-flexbox>div.flex:last-child {
+      padding-bottom: 0;
+    }
+  
+    .flex>h5 {
+      font-size: 44px;
+    }
+  
+    .flex>p {
+      width: 10em;
+      font-size: 34px;
+    }
   }
