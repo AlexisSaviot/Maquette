@@ -12,69 +12,70 @@
   @include respond-to("small") {
     display: block;
   }
-}
 
-&>aside.zone-left {
-  grid-column: 1;
-  grid-row: 1;
 
-  @include respond-to("medium") {
+  &>aside.zone-left {
     grid-column: 1;
     grid-row: 1;
+
+    @include respond-to("medium") {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &>img {
+      max-width: 100%;
+      min-height: 100%;
+    }
   }
 
-  &>img {
-    max-width: 100%;
-    min-height: 100%;
-  }
-}
-
-&>.zone-right {
-  grid-column: 2/3;
-  grid-row: 1;
-  background-color: #01333e;
-  color: white;
-  font-style: italic;
-  font-size: 25px;
-
-  @include respond-to("medium") {
-    grid-column: 2;
+  &>.zone-right {
+    grid-column: 2/3;
     grid-row: 1;
-  }
-
-  &>h2 {
-    padding: 1em;
-
-    @include respond-to("medium") {
-      padding: 0;
-      padding-top: 1em;
-    }
-  }
-
-  &>blockquote {
-    padding-left: 5em;
-    padding-right: 5em;
+    background-color: #01333e;
+    color: white;
+    font-style: italic;
+    font-size: 25px;
 
     @include respond-to("medium") {
-      padding: 0 1em;
+      grid-column: 2;
+      grid-row: 1;
     }
 
-    &>.quote {
-      display: flex;
-      font-size: 100px;
-      padding-left: -2em;
-      padding-right: -2em;
+    &>h2 {
+      padding: 1em;
+
+      @include respond-to("medium") {
+        padding: 0;
+        padding-top: 1em;
+      }
     }
 
-    &>.bold {
-      display: flex;
-      justify-content: flex-end;
-      font-style: normal;
-      font-weight: bold;
-    }
+    &>blockquote {
+      padding-left: 5em;
+      padding-right: 5em;
 
-    &>span:last-child {
-      justify-content: end;
+      @include respond-to("medium") {
+        padding: 0 1em;
+      }
+
+      &>.quote {
+        display: flex;
+        font-size: 100px;
+        padding-left: -2em;
+        padding-right: -2em;
+      }
+
+      &>.bold {
+        display: flex;
+        justify-content: flex-end;
+        font-style: normal;
+        font-weight: bold;
+      }
+
+      &>span:last-child {
+        justify-content: end;
+      }
     }
   }
 }

@@ -49,5 +49,16 @@
         text-transform: uppercase;
       }
     }
+
+    &>#modal {
+      background-color: white;
+      position: absolute;
+      z-index: 100;
+      display: none;
+      
+      &>img {
+        width: 300px;
+      }
+    }
   }
 }
