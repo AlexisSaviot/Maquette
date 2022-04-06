@@ -1,24 +1,24 @@
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding: 1em;
-    color: rgb(100, 100, 100);
-  }
-  
-  footer>div>nav>ul>li>a {
-    border-right: 1px grey solid;
-    padding-right: 1em;
-    margin-right: 1em;
-    text-decoration: none;
-    color: rgb(100, 100, 100);
-    text-transform: uppercase;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1em;
+  color: rgb(100, 100, 100);
+}
+
+footer>div>nav>ul>li>a {
+  border-right: 1px grey solid;
+  padding-right: 1em;
+  margin-right: 1em;
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  text-transform: uppercase;
 
   @include respond-to("medium") {
-    
+    font-size: 24px;
+  }
+
 }
-@include respond-to("small") {
-  
-}
+
+@include respond-to("small") {}

@@ -1,89 +1,156 @@
 #equipe {
-    height: 35em;
-  }
-  
-  .grey {
-    background-color: rgb(224, 224, 224);
-  }
-  
-  .portrait>img {
-    border-radius: 100em;
-    border: 1px solid #01333e;
-    width: 150px;
-  }
-  
-  .conteneur-flexbox {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 10em;
-  }
-  
-  .flex {
-    text-align: center;
-    width: 9em;
-  }
+  height: 35em;
 
   @include respond-to("medium") {
-    #equipe {
-      height: 60em;
-    }
-  
-    .portrait>img {
-      width: 15em;
-    }
-  
-    .conteneur-flexbox {
-      display: grid;
-      grid-template-areas:
-        "arthur céline"
-        "léo cyril";
-      grid-auto-flow: row;
-      padding-right: 5em;
-      padding-left: 5em;
-    }
-  
-    .flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding-bottom: 3em;
-    }
+    height: 60em;
   }
+
   @include respond-to("small") {
-    #equipe>.inside>h2 {
-      padding: 3em 1em 3em 1em
+    height: 190em;
+  }
+
+  &>.inside {
+    &>h2 {
+      @include respond-to("small") {
+        padding: 3em 1em 3em 1em
+      }
     }
-  
-    #equipe {
-      height: 190em;
-    }
-  
-    .portrait>img {
-      width: 20em;
-    }
-  
-    .conteneur-flexbox {
+
+    &>.conteneur-flexbox {
       display: flex;
-      flex-direction: column;
-    }
-  
-    .flex {
-      width: 100%;
-      padding-bottom: 10em;
-    }
-  
-    .conteneur-flexbox>div.flex:last-child {
-      padding-bottom: 0;
-    }
-  
-    .flex>h5 {
-      font-size: 44px;
-    }
-  
-    .flex>p {
-      width: 10em;
-      font-size: 34px;
+      justify-content: space-around;
+      align-items: center;
+      padding-left: 10em;
+
+      @include respond-to("medium") {
+        display: grid;
+        grid-template-areas:
+          "arthur céline"
+          "léo cyril";
+        grid-auto-flow: row;
+        padding-right: 5em;
+        padding-left: 5em;
+      }
+
+      @include respond-to("small") {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &>.flex {
+        text-align: center;
+        width: 9em;
+
+        @include respond-to("medium") {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding-bottom: 3em;
+        }
+
+        @include respond-to("small") {
+          width: 100%;
+          padding-bottom: 10em;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+          &>h5 {
+            font-size: 44px;
+          }
+
+          &>p {
+            width: 10em;
+            font-size: 34px;
+          }
+        }
+
+        &>.portrait>img {
+          border-radius: 100em;
+          border: 1px solid #01333e;
+          width: 150px;
+
+          @include respond-to("medium") {
+            width: 15em;
+          }
+
+          @include respond-to("small") {
+            width: 20em;
+          }
+        }
+      }
     }
   }
+}
+
+
+
+
+
+
+// @include respond-to("medium") {
+//   #equipe {
+//     height: 60em;
+//   }
+
+//   .portrait>img {
+//     width: 15em;
+//   }
+
+//   .conteneur-flexbox {
+//     display: grid;
+//     grid-template-areas:
+//       "arthur céline"
+//       "léo cyril";
+//     grid-auto-flow: row;
+//     padding-right: 5em;
+//     padding-left: 5em;
+//   }
+
+//   .flex {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     padding-bottom: 3em;
+//   }
+// }
+
+// @include respond-to("small") {
+//   #equipe>.inside>h2 {
+//     padding: 3em 1em 3em 1em
+//   }
+
+//   #equipe {
+//     height: 190em;
+//   }
+
+//   .portrait>img {
+//     width: 20em;
+//   }
+
+//   .conteneur-flexbox {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .flex {
+//     width: 100%;
+//     padding-bottom: 10em;
+//   }
+
+//   .conteneur-flexbox>div.flex:last-child {
+//     padding-bottom: 0;
+//   }
+
+//   .flex>h5 {
+//     font-size: 44px;
+//   }
+
+//   .flex>p {
+//     width: 10em;
+//     font-size: 34px;
+//   }
+// }

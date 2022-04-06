@@ -1,160 +1,156 @@
 #contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  fieldset>label {
-    text-transform: uppercase;
-    font-weight: 700;
-    padding-bottom: 1em;
-  }
-  
-  input,
-  textarea {
-    border: none;
-    border-radius: 0.2em;
-  }
-  
-  #fieldset1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1em;
-  }
-  
-  fieldset#name,
-  fieldset#mail {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-  }
-  
-  #name>input,
-  #mail>input {
-    width: 20em;
-    height: 2em;
-  }
-  
-  #fieldset2 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-bottom: 2em;
-  }
-  
-  #fieldset2>label {
-    margin-left: 1em;
-  }
-  
-  #fieldset2>textarea {
-    width: 43em;
-    height: 6em;
-    margin-left: 1em;
-  }
-  
-  i.fas {
-    display: inline;
-    font-size: 24px;
-    padding: 1em;
-  }
-  
-  #field_contact {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 3em;
-    font-weight: bold;
-  }
-  
-  .tel_wrap {
-    padding-right: 1em;
-  }
-  
-  .tel_wrap>a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .address_wrap>address {
-    display: inline-block;
-  }
-  
-  @include respond-to("medium") {
-    fieldset#name,
-    fieldset#mail {
-      display: flex;
-      flex-direction: column;
-      padding: 1em;
-    }
-  
-    #name>input,
-    #mail>input {
-      width: 20em;
-      height: 3em;
-    }
-  
-    #fieldset2>textarea {
-      width: 43em;
-      height: 10em;
-    }
-  
-    i.fas {
-      font-size: 44px;
-    }
-  
-    #field_contact {
-      font-size: 24px;
-    }
-  
-    footer>div>nav>ul>li>a {
-      font-size: 24px;
-    }
-  }
-  @include respond-to("small") {
-    #fieldset1 {
-      display: block;
-    }
-  
-    #fieldset2 {
-      padding: 0 0 3em 0;
-    }
-  
-    #name>input,
-    #mail>input {
-      width: 25em;
-      height: 8em;
-    }
-  
-    fieldset>label {
-      font-size: 44px;
-    }
-  
-    #fieldset2>label {
-      margin-left: 0.3em;
-    }
-  
-    #fieldset2>textarea {
-      width: 25em;
-      height: 20em;
-    }
-    #field_contact{
-      display: block;
-    }
-  
-    i.fas {
-      font-size: 44px;
-      padding-left: 0.4em;
-    }
-  
-    .tel_wrap {
-      display: block;
-      font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &>.inside>form {
+    & label {
+      text-transform: uppercase;
+      font-weight: 700;
       padding-bottom: 1em;
+
+      @include respond-to("small") {
+        font-size: 44px;
+      }
     }
-  
-    .address_wrap{
-      display: block;
-      font-size: 30px;
+
+    &>input,
+    &>textarea {
+      border: none;
+      border-radius: 0.2em;
+    }
+
+    &>#fieldset1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1em;
+
+      @include respond-to("small") {
+        display: block;
+      }
+
+      &>#name,
+      &>fieldset#mail {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        @include respond-to("medium") {
+          display: flex;
+          flex-direction: column;
+          padding: 1em;
+        }
+
+        &>input,
+        &>input {
+          width: 20em;
+          height: 2em;
+
+          @include respond-to("medium") {
+            height: 3em;
+          }
+
+          @include respond-to("small") {
+            width: 25em;
+            height: 8em;
+          }
+
+        }
+
+      }
+    }
+
+    &>#fieldset2 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-bottom: 2em;
+
+      @include respond-to("small") {
+        padding: 0 0 3em 0;
+      }
+
+      &>label {
+        margin-left: 1em;
+
+        @include respond-to("small") {
+          margin-left: 0.3em;
+        }
+      }
+
+      &>textarea {
+        width: 43em;
+        height: 6em;
+        margin-left: 1em;
+
+        @include respond-to("medium") {
+          width: 43em;
+          height: 10em;
+        }
+
+        @include respond-to("small") {
+          width: 25em;
+          height: 20em;
+        }
+      }
+    }
+
+    #field_contact {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 3em;
+      font-weight: bold;
+
+      @include respond-to("medium") {
+        font-size: 24px;
+      }
+
+      @include respond-to("small") {
+        display: block;
+      }
+
+      &>.tel_wrap {
+        padding-right: 1em;
+
+        @include respond-to("small") {
+          display: block;
+          font-size: 30px;
+          padding-bottom: 1em;
+        }
+
+        &>a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      &>.address_wrap {
+
+        @include respond-to("small") {
+          display: block;
+          font-size: 30px;
+        }
+
+        &>i.fas {
+          display: inline;
+          font-size: 24px;
+          padding: 1em;
+
+          @include respond-to("medium") {
+            font-size: 44px;
+          }
+
+          @include respond-to("small") {
+            padding-left: 0.4em;
+          }
+        }
+
+        &>address {
+          display: inline-block;
+        }
+      }
     }
   }
+}

@@ -2,83 +2,79 @@
   display: grid;
   grid-template-columns: 3;
   grid-template-rows: 1;
+
+  @include respond-to("medium") {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+  }
+
+  @include respond-to("small") {
+    display: block;
+  }
 }
 
-aside.zone-left {
+&>aside.zone-left {
   grid-column: 1;
   grid-row: 1;
+
+  @include respond-to("medium") {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  &>img {
+    max-width: 100%;
+    min-height: 100%;
+  }
 }
 
-.zone-left>img {
-  max-width: 100%;
-  min-height: 100%;
-}
-
-.zone-right {
+&>.zone-right {
   grid-column: 2/3;
   grid-row: 1;
   background-color: #01333e;
   color: white;
   font-style: italic;
   font-size: 25px;
-}
 
-.zone-right>h2 {
-  padding: 1em;
-}
-
-blockquote {
-  padding-left: 5em;
-  padding-right: 5em;
-}
-
-blockquote>.quote {
-  display: flex;
-  font-size: 100px;
-  padding-left: -2em;
-  padding-right: -2em;
-}
-
-blockquote>span:last-child {
-  justify-content: end;
-}
-
-.bold {
-  display: flex;
-  justify-content: flex-end;
-  font-style: normal;
-  font-weight: bold;
-}
-
-@include respond-to("medium") {
-  #temoignages>.inside {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 1;
-  }
-
-  aside.zone-left {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .zone-right {
+  @include respond-to("medium") {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .zone-right>h2 {
-    padding: 0;
-    padding-top: 1em;
+  &>h2 {
+    padding: 1em;
+
+    @include respond-to("medium") {
+      padding: 0;
+      padding-top: 1em;
+    }
   }
 
-  blockquote {
-    padding: 0 1em;
-  }
-}
+  &>blockquote {
+    padding-left: 5em;
+    padding-right: 5em;
 
-@include respond-to("small") {
-  #temoignages>.inside {
-    display: block;
+    @include respond-to("medium") {
+      padding: 0 1em;
+    }
+
+    &>.quote {
+      display: flex;
+      font-size: 100px;
+      padding-left: -2em;
+      padding-right: -2em;
+    }
+
+    &>.bold {
+      display: flex;
+      justify-content: flex-end;
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    &>span:last-child {
+      justify-content: end;
+    }
   }
 }

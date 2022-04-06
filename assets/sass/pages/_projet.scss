@@ -1,57 +1,53 @@
 #projet {
-    height: 15em;
-    display: flex;
-    justify-content: center;
-    padding: 3em;
+  height: 15em;
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+
+  @include respond-to("medium") {
+    height: 40em;
   }
-  
-  div#projet>div.inside {
+
+  @include respond-to("small") {
+    height: 50em;
+  }
+
+  &>div.inside {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
     text-align: center;
-  }
-  
-  div#projet>div.inside>p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  div#projet>div.inside>p>a {
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    margin: 1em;
-    width: 7em;
-    text-decoration: none;
-    border: #01333e solid 1px;
-    color: #01333e;
-    text-transform: uppercase;
-  }
 
-  @include respond-to("medium") {
-    #projet {
-      height: 40em;
-    }
-  
-    div#projet>div.inside {
+    @include respond-to("medium") {
       width: 90%;
     }
-  
-    div#projet>div.inside>p {
-      font-size: 30px;
+
+    &>p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond-to("medium") {
+        font-size: 30px;
+      }
+
+      @include respond-to("small") {
+        font-size: 16px;
+      }
+
+      &>a {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        margin: 1em;
+        width: 7em;
+        text-decoration: none;
+        border: #01333e solid 1px;
+        color: #01333e;
+        text-transform: uppercase;
+      }
     }
   }
-
-  @include respond-to("small") {
-      #projet {
-  height: 50em;
-  }
-
-  #projet>.inside>p {
-    font-size: 16px;
-  }
-  }
+}
